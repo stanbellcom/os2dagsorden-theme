@@ -1,79 +1,213 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
-#section-header{
-    /* Fallback */
-    background: #e7e7e7 url('../img/img_header_elipse.png') no-repeat bottom left;
+    
+/*-----------------Search exp-meetings------*/
+#edit-from-date-value-datepicker-popup-0,
+#edit-from-date-value-datepicker-popup-1 {
+  border : 1px solid #b9b9b9;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
 
-    /* W3C */
-    background:
-    url('../img/img_header_elipse.png') no-repeat bottom left,
-    linear-gradient(top, #ffffff 0%,#e7e7e7 100%);
-    
-    /* Safari 4-5, Chrome 1-9 */
-    background:
-    url('../img/img_header_elipse.png') no-repeat bottom left,
-    -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e7e7e7), to(#ffffff));
-    
-    /* Safari 5.1, Chrome 10+ */
-    background:
-    url('../img/img_header_elipse.png') no-repeat bottom left,
-    -webkit-linear-gradient(top, #ffffff, #e7e7e7);
-    
-    /* Firefox 3.6+ */
-    background:
-    url('../img/img_header_elipse.png') no-repeat bottom left,
-    -moz-linear-gradient(top, #ffffff, #e7e7e7);
-    
-    /* IE 10 */
-    background:
-    url('../img/img_header_elipse.png') no-repeat bottom left,
-    -ms-linear-gradient(top, #ffffff, #e7e7e7);
-    
-    /* Opera 11.10+ */
-    background:
-    url('../img/img_header_elipse.png') no-repeat bottom left,
-    -o-linear-gradient(top, #ffffff, #e7e7e7);
-    
-    background-size: 100% 100%;
+}
+#edit-to-date-value-datepicker-popup-0,
+#edit-to-date-value-datepicker-popup-1 {
+  border : 1px solid #b9b9b9;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+
+}
+#edit-field-committee-tid {
+  border : 1px solid #b9b9b9;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+#edit-search-params {
+  border : 1px solid #b9b9b9;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+#block-views-exp-meetings-search-page {
+  margin-bottom : 10px !important;
 }
 
-body{
-    /* Fallback */
-    background: #e7e7e7 url('../img/img_body_elipse.png') no-repeat top left;     
-
-    /* W3C */
-    background:
-    url('../img/img_body_elipse.png') no-repeat top left,
-    linear-gradient(top, #f5f5f5 0%,#e7e7e7 100%);
-    
-    /* Safari 4-5, Chrome 1-9 */
-    background:
-    url('../img/img_body_elipse.png') no-repeat top left,
-    -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e7e7e7), to(#f5f5f5));
-    
-    /* Safari 5.1, Chrome 10+ */
-    background:
-    url('../img/img_body_elipse.png') no-repeat top left,
-    -webkit-linear-gradient(top, #f5f5f5, #e7e7e7);
-    
-    /* Firefox 3.6+ */
-    background:
-    url('../img/img_body_elipse.png') no-repeat top left,
-    -moz-linear-gradient(top, #f5f5f5, #e7e7e7);
-    
-    /* IE 10 */
-    background:
-    url('../img/img_body_elipse.png') no-repeat top left,
-    -ms-linear-gradient(top, #f5f5f5, #e7e7e7);
-    
-    /* Opera 11.10+ */
-    background:
-    url('../img/img_body_elipse.png') no-repeat top left,
-    -o-linear-gradient(top, #f5f5f5, #e7e7e7);
-    
-    background-size: 80% 100%;
-    background-attachment: fixed;
+.page-meetings-search div.view-meetings-search {
+  padding : 10px;
 }
+@media screen and (max-width: 300px) {
+
+  .not-front #region-content
+  {
+    padding-top: 290px;
+  }
+  .page-meeting-notes.toolbar #block-views-exp-meetings-search-page,
+  .page-meeting-bullet-point-bullet-point-attachment.toolbar #block-views-exp-meetings-search-page {
+    top: 0px !important;
+  }
+  .page-meeting-notes.toolbar #block-views-exp-meetings-search-page,
+  .not-front #block-views-exp-meetings-search-page {
+    position : absolute;
+    top : 0px;
+  }
+  .not-front.page-calendar-field-date.toolbar #block-views-exp-meetings-search-page,
+  .not-front.page-meetings-search.toolbar #block-views-exp-meetings-search-page,
+  .not-front.page-meeting-.toolbar #block-views-exp-meetings-search-page,
+  .not-front.page-meeting-bullet-point.toolbar #block-views-exp-meetings-search-page {
+    position : absolute;
+    top : -290px;
+  }
+
+  .page-meetings-search .view-meetings-search .view-header .help-button {
+    top : 310px;
+  }
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 36.5em) {
+  #block-views-exp-meetings-search-page #edit-from-date-wrapper {
+     width:35%;
+   }
+
+  #block-views-exp-meetings-search-page #edit-to-date-wrapper {
+     width:35%;
+   }
+
+  #block-views-exp-meetings-search-page #edit-field-committee-tid-wrapper {
+    width:35%;
+   }
+
+  #block-views-exp-meetings-search-page #edit-search-params-wrapper {
+    width:35%;
+   }
+  #block-views-exp-meetings-search-page .views-submit-button {
+    bottom : 10px;
+    position :absolute;
+    right : 0px;
+  }
+
+  .not-front #block-views-exp-meetings-search-page .views-submit-button {
+    bottom : 20px;
+  }
+  .not-front.page-calendar-field-date.toolbar #block-views-exp-meetings-search-page,
+  .not-front.page-meetings-search.toolbar #block-views-exp-meetings-search-page,
+  .not-front.page-meeting-.toolbar #block-views-exp-meetings-search-page,
+  .not-front.page-meeting-bullet-point.toolbar #block-views-exp-meetings-search-page {
+    position : absolute;
+    top : -160px;
+  }
+  .page-meeting-notes.toolbar #block-views-exp-meetings-search-page,
+  .page-meeting-bullet-point-bullet-point-attachment.toolbar #block-views-exp-meetings-search-page {
+    top: 0px !important;
+  }
+ 
+  .not-front #region-content {
+    padding-top: 160px;
+  }
+  
+  .not-front #block-views-exp-meetings-search-page {
+  position : absolute;
+  top : 0px;
+  }
+   .page-meetings-search .view-meetings-search .view-header .help-button {
+    top : 180px;
+  }
+}
+
+@media screen and (min-width: 36.5em) {
+   .not-front #region-content {
+    padding-top: 60px;
+  }
+
+  #block-views-exp-meetings-search-page .views-exposed-form {
+    border-left : none;
+    border-right: none;
+    border-bottom: none;
+    box-shadow:none;
+    padding-top : 0px;
+  }
+
+   #block-views-exp-meetings-search-page #edit-from-date-wrapper {
+     width:15%;
+   }
+
+   #block-views-exp-meetings-search-page #edit-to-date-wrapper {
+     width:15%;
+   }
+
+   #block-views-exp-meetings-search-page #edit-field-committee-tid-wrapper{
+    width:18%;
+   }
+
+   #block-views-exp-meetings-search-page #edit-search-params-wrapper {
+    width:18%;
+   }
+  #block-views-exp-meetings-search-page .views-submit-button {
+    bottom : 6px;
+    padding-right : 0;
+    padding-top: 0;
+    position :absolute;
+    right: 0;
+  }
+
+  #block-views-exp-meetings-search-page h2.block-title {
+    border-bottom: 6px solid #CBCBCB;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  #block-views-exp-meetings-search-page .views-exposed-widgets {
+    margin-bottom : 1px;
+
+  }
+  #block-views-exp-meetings-search-page .block-inner {
+    margin-bottom : 3px;
+  }
+  #block-views-exp-meetings-search-page .description {
+    bottom : 43px;
+    left:120px;
+    position : absolute;
+
+  }
+  #block-views-exp-meetings-search-page .block-title {
+    width: 10%;
+    float: left;
+    margin-top: 10px;
+    margin-right : 5px;
+  }
+  .not-front.page-calendar-field-date.toolbar #block-views-exp-meetings-search-page,   
+  .not-front.page-meetings-search.toolbar #block-views-exp-meetings-search-page,
+  .not-front.page-meeting-.toolbar #block-views-exp-meetings-search-page,
+  .not-front.page-meeting-bullet-point.toolbar #block-views-exp-meetings-search-page {
+    position : absolute;
+    top : -70px;
+  }
+  .page-meeting-notes.toolbar #block-views-exp-meetings-search-page,
+  .page-meeting-bullet-point-bullet-point-attachment.toolbar #block-views-exp-meetings-search-page {
+    top: -10px !important;
+  }
+
+  .not-front #block-views-exp-meetings-search-page {
+    position : absolute;
+    top : -10px;
+
+  }
+ .page-meeting-bullet-point-bullet-point-attachment .node .help-button,
+ .page-meetings-search .view-meetings-search .view-header .help-button {
+    top : 70px;
+  }
+  .page-meetings-search.toolbar .view-meetings-search .view-header .help-button{
+    top : 10px;
+  }
+
+}
+/*-----------------------------  End of Search exp- meetings -----------------*/
 
 #region-footer-first,
 #region-postscript-first{
@@ -81,7 +215,7 @@ body{
 }
 
 #region-footer-first{
-    background: url('../img/footer_logo.png') no-repeat center 5px;
+    background: url('../img/footer_logo.jpg') no-repeat center 5px;
     border-top: 1px solid #e5e5e5;
 }
 
@@ -158,7 +292,6 @@ table.views-table tr td .attachment_text_full_container a:link, table.views-tabl
   border-style: solid;
   border-top: 1px solid #E5E5E5;
   color: #333333;
-  font-family: Arial,Helvetica,sans-serif;
   font-size: 13px;
   font-weight: bold;
   line-height: 30px;
@@ -189,14 +322,10 @@ table.views-table tr td .attachment_text_full_container a:link, table.views-tabl
   padding-right: 20px;
 }
 
-/* Improved multile select*/
-.improvedselect input.improvedselect_filter {
-    height: 25px;
-    padding: 0;
-    width: 100%;
+/* Moving calendar block 10px uptop */
+#block-views-events-block-1{
+  margin-top: -10px;
 }
-
-
 /*---------------------------- Small Fixes End ----------------------------*/
 
 
@@ -212,12 +341,11 @@ div.content ul.menu li a{
     color: #333333;
     
     text-shadow: 0 1px 0 #EEEEEE;
-    font-family:Arial,Helvetica,sans-serif;
     font-weight:100;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     
-    padding: 10px 10px 10px 50px;
+    padding: 5px 5px 5px 50px;
 }
 
 div.content ul.menu li a.active{
@@ -454,6 +582,23 @@ ul li.leaf {
     list-style-type: none;
 }
 
+#region-sidebar-second .region-sidebar-second-inner.fixed {
+  position: fixed;
+  width: inherit;
+  top: 50px;
+}
+
+.side-menu-go-top{
+  position: relative;
+}
+
+#region-sidebar-second .region-sidebar-second-inner .side-menu-go-top{
+  display: none;
+}
+
+#region-sidebar-second .region-sidebar-second-inner.fixed .side-menu-go-top{
+  display: inherit;
+}
 /*---------------------------- Sidepane menu End ----------------------------*/
 
 /*---------------------------- Indicator Icons Start ----------------------------*/
@@ -574,7 +719,6 @@ ul li.leaf {
 .user-logout-textbox {
     color: #323232;
     text-shadow:1px 1px #f5f5f5;
-    font-family:Arial,Helvetica,sans-serif;
     font-weight:bold;
     
     border-color: #b9b9b9 #b9b9b9 #BBBBBB;
@@ -626,7 +770,6 @@ ul li.leaf {
     color: #323232;
     text-shadow:1px 1px #f5f5f5;
     text-transform:uppercase;
-    font-family:Arial,Helvetica,sans-serif;
     font-weight:100;
     font-size: 16px;
     
@@ -642,10 +785,12 @@ ul li.leaf {
 div.date-heading h3 a, div.date-heading h3{
     color: #323232;
     text-decoration: none;
-    font-family:Arial,Helvetica,sans-serif;
     background: none;
 }
-
+/*.view-display-id-page {
+   border-top-left-radius: 7px;
+   border-top-right-radius: 7px;
+}*/
 .view-id-events,
 .view-id-user_committee,
 .view-id-user_follow_committees,
@@ -695,9 +840,8 @@ h2.block-title, h1.title{
     color: #323232;
     text-shadow:1px 1px #f5f5f5;
     text-transform:uppercase;
-    font-family:Arial,Helvetica,sans-serif;
     font-weight:100;
-    font-size: 20px;
+    font-size: 17px;
     margin-top: 0;
     
     /* Fallback */
@@ -730,8 +874,13 @@ div.front-page-info-block, .node{
     padding: 5px 10px 10px 20px;
 }
 
-div.front-page-content-block {
+.front #region-content .block {
+    background-color: #FFF;
     margin-bottom: 50px;
+}
+
+.front #region-content .block div.view { 
+    padding: 10px
 }
 
 div.block-inner{
@@ -899,7 +1048,7 @@ width: 100%;
 /*---------------------------- Omega globals override START ----------------------------*/
 a:link, a:visited,
 .month a:link, .month a:visited {
-    color: #790056;
+    color: #007aaf;
     text-decoration: none;
 }
 
@@ -1014,7 +1163,6 @@ pager li.pager-first, .pager li.pager-previous.first {
     padding: 5px 10px 5px 10px;
     
     text-shadow:1px 1px #f5f5f5;
-    font-family:Arial,Helvetica,sans-serif;
     font-size: 13px;
     text-decoration: none;
     text-transform:uppercase;
@@ -1044,18 +1192,19 @@ pager li.pager-first, .pager li.pager-previous.first {
 
 .controls-right {
   float: right;
-  margin: 7px;
+  margin: 7px 7px 7px 0;
+  padding: 5px 0 5px 0;
 }
 
 .controls-left {
   float: left;
-  margin: 7px;
+  margin: 7px 0 7px 7px;
+  padding: 5px 0 5px 0;
 }
 
 .controls-right a {
   margin-left: 5px;
 }
-
 /*----------------------------Omega globals override END----------------------------*/
 
 /*----------------------------Tabs override start----------------------------*/
@@ -1139,7 +1288,7 @@ table.views-table tr td a:hover {
     display: block;
     position: relative;
     
-    background-color: #F0EDFF;
+   */ background-color: #F0EDFF;/*
     text-shadow:1px 1px #f5f5f5;
 
     color: #333333;
@@ -1148,7 +1297,6 @@ table.views-table tr td a:hover {
 /*     vertical-align:center; */
     line-height:30px;
     
-    font-family:Arial,Helvetica,sans-serif;
     font-weight:bold;
     font-size: 13px;
     text-decoration: none;
@@ -1158,6 +1306,9 @@ table.views-table tr td a:hover {
     border-top-width: 1px;
     border-bottom-width: 1px;
     white-space: nowrap;
+    border-left: none;
+    border-top: none;
+    border-right: none; 
 }
 
 table.views-table tr td li.bilag a,
@@ -1176,6 +1327,9 @@ td, th {
     vertical-align: middle;
 }
 
+th a, th a:link, th a:visited {
+    color: #FFF;
+}
 
 table tbody tr th {
   vertical-align: top;
@@ -1350,11 +1504,11 @@ a.annotator-wrapper {
     margin-left: -300px;
     margin-top: -150px;
 }
-
+ 
 .annotator-touch-editor .annotator-touch-widget {
     width: 600px;
 }
-
+ 
 .annotator-touch-controls .annotator-button {
     line-height: 36px;
 }
@@ -1362,7 +1516,7 @@ a.annotator-wrapper {
   border: none;
   border-radius: 5px;
 }
-
+ 
 .annotator-touch-widget.annotator-touch-controls{
   background: none;
 }
@@ -1376,11 +1530,10 @@ a.annotator-wrapper {
   border-style: solid;
   border-width: 1px;
 }
-
+ 
 .annotator-touch-widget-inner{
   border-radius: 5px;
 }
-
 /* ---------------------------- Annotateit override END---------------------------- */
 
 /* ---------------------------- Bilag preview pdf2htmlEX PDF -> HTML START ---------------------------- */
@@ -1492,23 +1645,38 @@ a.annotator-wrapper {
 }
 
 .attachment_text_container .attachment_text_trimmed_container, .attachment_text_container .attachment_full_trimmed_container{
-  max-width: 500px;
+  max-width: 400px;
   position: relative;
 }
 
 .attachment_text_container .attachment-text{
   overflow: hidden;
-  max-width: 500px;
+  max-width: 440px;
 }
 
 .attachment_text_container .attachment_text_full_container, .attachment_text_container .attachment_text_trimmed_container{
   padding: 5px 5px 0  5px;
 }
 
+/*.annotator-touch-editor .annotator-touch-widget {
+    position: absolute;
+}*/
+
 .close-overlay-bilag-link{
   position: relative;
   float: right;
   top: -35px;
+}
+
+.attachment-text table, 
+.attachment-text tbody,
+.attachment-text tfoot, 
+.attachment-text thead, 
+.attachment-text tr, 
+.attachment-text th, 
+.attachment-text td 
+{
+  border: 1px solid black;
 }
 
 /* ---------------------------- Meeting details attachment text START---------------------------- */

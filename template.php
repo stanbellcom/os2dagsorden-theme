@@ -33,6 +33,7 @@ function os2dagsorden_theme_preprocess_page(&$variables)
     drupal_add_js('add_indicator_help_text();', 'inline');
     drupal_add_js('hide_print_buttons();', 'inline');
     drupal_add_js('resize_listener();', 'inline');
+    drupal_add_js('stick_side_menu();', 'inline');
     
     $view = views_get_page_view();
     if (!empty($view)) {
@@ -82,7 +83,7 @@ function os2dagsorden_theme_preprocess_page(&$variables)
             $nid = arg(3);
             $bullet_point = node_load(arg(3));
             if ($bullet_point->field_bul_point_closed['und'][0]['value'] == 1 || $bullet_point->field_bul_point_personal['und'][0]['value'] == 1) {                
-		$user = os2dagsorden_access_helper_get_user();
+				$user = os2dagsorden_access_helper_get_user();
 		
                 $security_log_dir = explode('/',$_SERVER['DOCUMENT_ROOT']);
                 array_pop($security_log_dir);
