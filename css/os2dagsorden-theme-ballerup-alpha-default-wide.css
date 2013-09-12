@@ -1,21 +1,8 @@
 /* This file will hold styles that are loaded using the same media query as the wide grid. */
-.attachment_text_container .attachment_text_trimmed_container, .attachment_text_container .attachment_text_full_container{
-  max-width: 600px;
-}
- 
 div.content ul.menu li a{
     font-size: 20px;
 }
  
 h2.block-title, h1.title{
     font-size: 20px;
-}
- 
-.attachment_text_container .attachment_text_trimmed_container, .attachment_text_container .attachment_text_full_container{
-  max-width: 600px;
-}
- 
-.attachment_text_container .attachment-text{
-  overflow: hidden;
-  max-width: 600px;
 }
