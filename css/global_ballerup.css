@@ -325,11 +325,34 @@ table.views-table tr td a:hover {
 	border-left: none;
     border-top: none;
     border-right: none; 
+    border-bottom:none;
 }
 
 th a, th a:link, th a:visited {
     color: #FFF;
 }
+.bullet-point-print-link {
+  background: url('../img/icon-print-bullet-point.png') no-repeat 50% top;;
+height: 16px;
+width: 16px;
+display: block;
+float: right;
+/*margin-top: -20px;
+margin-right: 44px;*/
+}
+
+table .bullet-point-print-link-container {
+ width: 20px;
+min-width: 20px;
+height: 30px;
+}
+
+.print-meeting-link  {
+	
+	font-weight: normal;
+}
+
+
 /* ---------------------------- Table Styles START---------------------------- */
 
 /* ---------------------------- Meeting details attachment text START---------------------------- */
