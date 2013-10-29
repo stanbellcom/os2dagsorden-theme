@@ -34,7 +34,6 @@ zones[preface] = 'Preface'
 zones[postscript] = 'Postscript'
 css[global_ballerup.css][name]   = 'Ballerup custom styles'
 css[global_ballerup.css][options][weight] = '2'
-stylesheets-conditional[lt IE 9][all][] = ie.css
 settings[toggle_logo] = '1'
 settings[toggle_name] = '0'
 settings[toggle_slogan] = '0'

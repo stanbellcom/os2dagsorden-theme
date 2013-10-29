@@ -28,5 +28,6 @@
 function os2dagsorden_theme_ballerup_preprocess_page(&$variables) 
 {    
 	drupal_add_js(drupal_get_path('theme', 'os2dagsorden_theme_ballerup') . '/js/os2dagsorden_theme_ballerup.js');
-	drupal_add_js('stick_side_menu();', 'inline');   
+	drupal_add_js('stick_side_menu();', 'inline');  
+	drupal_add_css(drupal_get_path('theme', 'os2dagsorden_theme_ballerup') . '/css/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lt IE 9', '!IE' => FALSE), 'preprocess' => FALSE));
 }
