@@ -42,9 +42,22 @@ body{
 #block-views-exp-meetings-search-page {
   margin-bottom : 10px !important;
 }
- 
+/*LOGO region*/
+.region-branding-inner{
+	min-width:170px;
+	min-height: 50px;
+}
 .page-meetings-search div.view-meetings-search {
   padding : 10px;
+}
+.views-meeting-search-field-title{
+	width:20%;
+}
+.views-meeting-search-field-date{
+		width:18%;
+}
+.views-meeting-search-field-commitee{
+		width:18%;
 }
 @media screen and (max-width: 300px) {
  
@@ -127,7 +140,9 @@ body{
  
 @media screen and (min-width: 36.5em) {
    .not-front #region-content {
-    padding-top: 60px;
+   padding-top: 60px;
+
+
   }
  
   #block-views-exp-meetings-search-page .views-exposed-form {
