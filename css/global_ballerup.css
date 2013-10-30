@@ -265,6 +265,7 @@ div.content ul.menu li a{
 
 .view-header h3, .view-content h3{
     font-family: inherit;
+    font-size: 15px;
 }
 
 div.date-heading h3 a, div.date-heading h3{
@@ -274,8 +275,8 @@ div.date-heading h3 a, div.date-heading h3{
 
 /*---------------------------- Blocks START ----------------------------*/
 h2.block-title, h1.title{
-	font-family: Georgia,'Times New Roman',serif;
-	font-size: 17px;
+	font-family: Arial, Georgia,'Times New Roman',serif;
+	font-size: 15px;
 }
 
 .front #region-content .block {
