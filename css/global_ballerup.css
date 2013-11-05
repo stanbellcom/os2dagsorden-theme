@@ -292,7 +292,7 @@ div.date-heading h3 a, div.date-heading h3{
 
 /*---------------------------- Blocks START ----------------------------*/
 h2.block-title, h1.title{
-	font-family: Arial, Georgia,'Times New Roman',serif;
+	font-family: inherit;
 	font-size: 15px;
 	text-transform: none;
 }

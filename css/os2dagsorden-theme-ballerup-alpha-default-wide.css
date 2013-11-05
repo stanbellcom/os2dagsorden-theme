@@ -1,8 +1,8 @@
 /* This file will hold styles that are loaded using the same media query as the wide grid. */
 div.content ul.menu li a{
-    font-size: 17px;
+    font-size: 15px;
 }
  
 h2.block-title, h1.title{
-    font-size: 17px;
+    font-size: 15px;
 }
