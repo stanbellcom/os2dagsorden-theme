@@ -42,9 +42,22 @@ body{
 #block-views-exp-meetings-search-page {
   margin-bottom : 10px !important;
 }
- 
+/*LOGO region*/
+.region-branding-inner{
+	min-width:170px;
+	min-height: 50px;
+}
 .page-meetings-search div.view-meetings-search {
   padding : 10px;
+}
+.views-meeting-search-field-title{
+	width:20%;
+}
+.views-meeting-search-field-date{
+		width:18%;
+}
+.views-meeting-search-field-commitee{
+		width:18%;
 }
 @media screen and (max-width: 300px) {
  
@@ -127,7 +140,9 @@ body{
  
 @media screen and (min-width: 36.5em) {
    .not-front #region-content {
-    padding-top: 60px;
+   padding-top: 60px;
+
+
   }
  
   #block-views-exp-meetings-search-page .views-exposed-form {
@@ -265,17 +280,21 @@ div.content ul.menu li a{
 
 .view-header h3, .view-content h3{
     font-family: inherit;
+    font-size: 15px;
+    text-transform: none;
 }
 
 div.date-heading h3 a, div.date-heading h3{
     font-family: inherit;
 }
+
 /*---------------------------- Views End ----------------------------*/
 
 /*---------------------------- Blocks START ----------------------------*/
 h2.block-title, h1.title{
-	font-family: Georgia,'Times New Roman',serif;
-	font-size: 17px;
+	font-family: Arial, Georgia,'Times New Roman',serif;
+	font-size: 15px;
+	text-transform: none;
 }
 
 .front #region-content .block {
@@ -301,6 +320,7 @@ a.form-submit, a.button {
 .view .date-nav-wrapper .date-prev a, .button, #breadcrumb .breadcrumb a, .breadcrumb .breadcrumb-active,
 .pager li a {
 	font-family: inherit;
+	text-transform: none;
 }
 
 .controls-right {
@@ -325,11 +345,34 @@ table.views-table tr td a:hover {
 	border-left: none;
     border-top: none;
     border-right: none; 
+    border-bottom:none;
 }
 
 th a, th a:link, th a:visited {
     color: #FFF;
 }
+.bullet-point-print-link {
+  background: url('../img/icon-print-bullet-point.png') no-repeat 50% top;;
+height: 16px;
+width: 16px;
+display: block;
+float: right;
+/*margin-top: -20px;
+margin-right: 44px;*/
+}
+
+table .bullet-point-print-link-container {
+ width: 20px;
+min-width: 20px;
+height: 30px;
+}
+
+.print-meeting-link  {
+	
+	font-weight: normal;
+}
+
+
 /* ---------------------------- Table Styles START---------------------------- */
 
 /* ---------------------------- Meeting details attachment text START---------------------------- */
