@@ -249,6 +249,7 @@ table.views-table tr td .attachment_text_full_container a:link, table.views-tabl
 div.content ul.menu li a{
    	font-family: inherit;   
    	padding: 5px 5px 5px 50px;
+	font-size: 15px;
 }
 
 #region-sidebar-second .region-sidebar-second-inner.fixed {
@@ -292,7 +293,7 @@ div.date-heading h3 a, div.date-heading h3{
 
 /*---------------------------- Blocks START ----------------------------*/
 h2.block-title, h1.title{
-	font-family: Arial, Georgia,'Times New Roman',serif;
+	font-family: inherit;
 	font-size: 15px;
 	text-transform: none;
 }
