@@ -336,6 +336,10 @@ a.form-submit, a.button {
 /*---------------------------- Omega globals override START ----------------------------*/
 
 /* ---------------------------- Table Styles START---------------------------- */
+.attachment-text table {
+  max-width: 100% !important;
+  width: 100% !important;
+}
 table.views-table tr td a,
 table.views-table tr td a:hover {
 	font-family: inherit;
