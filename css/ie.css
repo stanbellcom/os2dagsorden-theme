@@ -2,3 +2,7 @@ table.views-table tr td a,
 table.views-table tr td a:hover {
   white-space: normal !important;
 }
+.views-meeting-search-field-date,
+.views-meeting-search-field-title {
+  width: auto !important;
+}
