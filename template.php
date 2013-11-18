@@ -1,11 +1,11 @@
 <?php
 /**
- * os2dagsorden_theme_ballerup
+ * os2dagsorden_theme_ringsted
  *
  * PHP version 5
  *
  * @category Themes
- * @package  Themes_os2dagsorden_theme_ballerup
+ * @package  Themes_os2dagsorden_theme_ringsted
  * @author   Stanislav Kutasevits <stan@bellcom.dk>
  * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
  * @file
@@ -25,9 +25,9 @@
  * @param mixed &$variables variables
  * @return none
  */
-function os2dagsorden_theme_ballerup_preprocess_page(&$variables)
+function os2dagsorden_theme_ringsted_preprocess_page(&$variables)
 {
-	drupal_add_js(drupal_get_path('theme', 'os2dagsorden_theme_ballerup') . '/js/os2dagsorden_theme_ballerup.js');
+	drupal_add_js(drupal_get_path('theme', 'os2dagsorden_theme_ringsted') . '/js/os2dagsorden_theme_ringsted.js');
 	drupal_add_js('stick_side_menu();', 'inline');
-	drupal_add_css(drupal_get_path('theme', 'os2dagsorden_theme_ballerup') . '/css/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lt IE 9', '!IE' => FALSE), 'preprocess' => FALSE));
+	drupal_add_css(drupal_get_path('theme', 'os2dagsorden_theme_ringsted') . '/css/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lt IE 9', '!IE' => FALSE), 'preprocess' => FALSE));
 }
