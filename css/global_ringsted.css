@@ -381,13 +381,16 @@ height: 30px;
 /* ---------------------------- Table Styles START---------------------------- */
 
 /* ---------------------------- Meeting details attachment text START---------------------------- */
+.attachment_text_container{
+  overflow-x: auto;
+}
 
 .attachment_text_container .attachment_text_trimmed_container, .attachment_text_container .attachment_full_trimmed_container{
-  max-width: 400px;
+  max-width: none;
 }
  
 .attachment_text_container .attachment-text{
-  max-width: 440px;
+  max-width: none;
 }
 
 .attachment-text table, 
@@ -400,4 +403,12 @@ height: 30px;
 {
   	border: 1px solid black;
 }
+
+.bullet-point-attachments .views-table{
+  table-layout: fixed;	
+}
+
+.bullet-point-attachments .views-table .views-field-php-5{
+  width: 1%;
+}	
 /* ---------------------------- Meeting details attachment text END ---------------------------- */
