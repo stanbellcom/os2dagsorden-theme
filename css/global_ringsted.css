@@ -408,7 +408,7 @@ height: 30px;
   table-layout: fixed;	
 }
 
-.bullet-point-attachments .views-table .views-field-php-5{
+.bullet-point-attachments .views-table .print-bullet-point-link{
   width: 1%;
 }	
 /* ---------------------------- Meeting details attachment text END ---------------------------- */
