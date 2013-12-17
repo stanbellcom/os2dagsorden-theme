@@ -206,7 +206,7 @@ body{
   .not-front.page-meeting-.toolbar #block-views-exp-meetings-search-page,
   .not-front.page-meeting-bullet-point.toolbar #block-views-exp-meetings-search-page {
     position : absolute;
-    top : -70px;
+    top : -70px !important;
     width: 100%;
   }
   .page-meeting-notes.toolbar #block-views-exp-meetings-search-page,
@@ -216,7 +216,7 @@ body{
  
   .not-front #block-views-exp-meetings-search-page {
     position : absolute;
-    top : -70px;
+    top : -70px !important;
  
   }
  .page-meeting-bullet-point-bullet-point-attachment .node .help-button,
