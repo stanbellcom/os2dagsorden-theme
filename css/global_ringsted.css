@@ -51,7 +51,7 @@ body{
   padding : 10px;
 }
 .views-meeting-search-field-title{
-	width:20%;
+	width:25%;
 }
 .views-meeting-search-field-date{
 		width:18%;
@@ -216,7 +216,7 @@ body{
  
   .not-front #block-views-exp-meetings-search-page {
     position : absolute;
-    top : -10px;
+    top : -70px;
  
   }
  .page-meeting-bullet-point-bullet-point-attachment .node .help-button,
@@ -270,6 +270,11 @@ div.content ul.menu li a{
   	display: inherit;
 }
 /*---------------------------- Sidepane menu End ----------------------------*/
+/*---------------------------- Region Inner ---------------------------------*/
+.region-inner{
+	position:relative;
+}
+/*---------------------------- Region Inner End ----------------------------*/
 
 /*---------------------------- User logout Start ----------------------------*/
 .user-logout-textbox {
@@ -399,5 +404,9 @@ height: 30px;
 .attachment-text td 
 {
   	border: 1px solid black;
+}
+table.views-table tr td li.bilag a,
+table.views-table tr td li.bilag a:hover {
+   padding-left: 0 !important;
 }
 /* ---------------------------- Meeting details attachment text END ---------------------------- */
