@@ -408,12 +408,11 @@ height: 30px;
 {
   	border: 1px solid black;
 }
-<<<<<<< HEAD
+
 table.views-table tr td li.bilag a,
 table.views-table tr td li.bilag a:hover {
    padding-left: 0 !important;
 }
-=======
 
 .bullet-point-attachments .views-table{
   table-layout: fixed;	
@@ -422,5 +421,5 @@ table.views-table tr td li.bilag a:hover {
 .bullet-point-attachments .views-table .print-bullet-point-link{
   width: 1%;
 }	
->>>>>>> 5db392eab5d5af9465bbc724e2aa02141a8e8647
+
 /* ---------------------------- Meeting details attachment text END ---------------------------- */
