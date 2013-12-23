@@ -51,7 +51,7 @@ body{
   padding : 10px;
 }
 .views-meeting-search-field-title{
-	width:20%;
+	width:25%;
 }
 .views-meeting-search-field-date{
 		width:18%;
@@ -206,7 +206,7 @@ body{
   .not-front.page-meeting-.toolbar #block-views-exp-meetings-search-page,
   .not-front.page-meeting-bullet-point.toolbar #block-views-exp-meetings-search-page {
     position : absolute;
-    top : -70px;
+    top : -70px !important;
     width: 100%;
   }
   .page-meeting-notes.toolbar #block-views-exp-meetings-search-page,
@@ -216,7 +216,7 @@ body{
  
   .not-front #block-views-exp-meetings-search-page {
     position : absolute;
-    top : -10px;
+    top : -70px !important;
  
   }
  .page-meeting-bullet-point-bullet-point-attachment .node .help-button,
@@ -270,6 +270,11 @@ div.content ul.menu li a{
   	display: inherit;
 }
 /*---------------------------- Sidepane menu End ----------------------------*/
+/*---------------------------- Region Inner ---------------------------------*/
+.region-inner{
+	position:relative;
+}
+/*---------------------------- Region Inner End ----------------------------*/
 
 /*---------------------------- User logout Start ----------------------------*/
 .user-logout-textbox {
@@ -377,17 +382,26 @@ height: 30px;
 	font-weight: normal;
 }
 
+table .hide_show_bilags_cases{
+    position: relative;
+    float:left;
+    left: -45px;
+    margin-right: -45px;
+}
 
 /* ---------------------------- Table Styles START---------------------------- */
 
 /* ---------------------------- Meeting details attachment text START---------------------------- */
+.attachment_text_container{
+  overflow-x: auto;
+}
 
 .attachment_text_container .attachment_text_trimmed_container, .attachment_text_container .attachment_full_trimmed_container{
-  max-width: 400px;
+  max-width: none;
 }
  
 .attachment_text_container .attachment-text{
-  max-width: 440px;
+  max-width: none;
 }
 
 .attachment-text table, 
@@ -400,4 +414,18 @@ height: 30px;
 {
   	border: 1px solid black;
 }
+
+table.views-table tr td li.bilag a,
+table.views-table tr td li.bilag a:hover {
+   padding-left: 0 !important;
+}
+
+.bullet-point-attachments .views-table{
+  table-layout: fixed;	
+}
+
+.bullet-point-attachments .views-table .print-bullet-point-link{
+  width: 1%;
+}	
+
 /* ---------------------------- Meeting details attachment text END ---------------------------- */
