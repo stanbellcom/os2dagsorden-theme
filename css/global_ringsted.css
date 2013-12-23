@@ -382,6 +382,12 @@ height: 30px;
 	font-weight: normal;
 }
 
+table .hide_show_bilags_cases{
+    position: relative;
+    float:left;
+    left: -45px;
+    margin-right: -45px;
+}
 
 /* ---------------------------- Table Styles START---------------------------- */
 
