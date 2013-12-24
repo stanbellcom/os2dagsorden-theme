@@ -423,3 +423,15 @@ table.views-table tr td li.bilag a:hover {
 }	
 
 /* ---------------------------- Meeting details attachment text END ---------------------------- */
+.views-table .annotator-wrapper{
+	position:initial!important;
+}
+tr.bulletpoint-row{
+	position:relative;
+	display:block;
+}
+
+ .views-table .annotator-outer{
+	margin-top: 78px;
+	margin-left:102px;
+}
