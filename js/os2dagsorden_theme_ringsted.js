@@ -10,7 +10,6 @@ function stick_side_menu(){
       jQuery('#region-sidebar-second .region-sidebar-second-inner').append('<div class="side-menu-go-top"><a href="#">^ TIL TOPPEN ^</a></div>');
       var top = jQuery('#region-sidebar-second .region-sidebar-second-inner').offset().top - parseFloat(jQuery('#region-sidebar-second .region-sidebar-second-inner').css('marginTop').replace(/auto/, 0));
       jQuery(window).scroll(function (event) {
-    console.log(jQuery('#region-sidebar-second .region-sidebar-second-inner').width());
     var y = jQuery(this).scrollTop();
     if (y >= (top-50)) {
       jQuery('#region-sidebar-second .region-sidebar-second-inner').addClass('fixed');
@@ -45,7 +44,6 @@ function bilag_cases_add_expand_behaviour(bulletPoint, bulletPointIndex, url, ma
 
     jQuery(this).parent().prepend("<input type='button' class='button hide_show_bilags_cases' id='btn_hide_bilags_cases_"+bulletPointIndex+"_"+index_attachment+"' value='⇓'>");
     jQuery("#btn_hide_bilags_cases_"+bulletPointIndex+"_"+index_attachment).click(function(){
-      console.log('here');
       //hide or show the content container
       jQuery("#bilags_cases_container_"+bulletPointIndex+"_"+index_attachment).toggle();
 
@@ -75,5 +73,15 @@ function bullet_point_details_init_ringsted(url, massive_bilag_expand){
   jQuery(".item-list-dagsordenspunkt .ul-item-list-dagsordenspunkt").each(function(index) {
 	bilag_cases_add_expand_behaviour(this, index, url, massive_bilag_expand);
     });
+  });
+}
+
+function open_all_bilag_case_bullet_points() {
+  jQuery(document).ready(function() {
+    jQuery(".hide_show_bilags_cases").each(function(index) {
+      if (jQuery(this).val() == '⇓') {
+	jQuery(this).click();
+      }
+    });  
   });
 }
