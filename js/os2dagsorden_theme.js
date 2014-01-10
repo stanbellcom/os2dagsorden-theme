@@ -73,20 +73,24 @@ function add_tablet_orientation_listener(){
 /**
  * Adds the behaviour of showing/hidng the right side panel with menu.
  */
-function add_show_hide_menu_behaviour(){
+
+function add_show_hide_menu_behaviour(menu_collapse){
    jQuery(document).ready(function() {
+          if(menu_collapse)                        
+                   hide_side_menu();                        
        jQuery("#show_hide_menu_button").click(function(){
-	  if (jQuery("#show_hide_menu_button").val() == "⇐")
-	      hide_side_menu();
-	  else
-	      show_side_menu();
- 	});
+          if (jQuery("#show_hide_menu_button").val() == "⇐")
+              hide_side_menu();
+          else
+              show_side_menu();
+         });
        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-       
-       if (width < 1000)
-	  hide_side_menu();
-   });
-}
+      
+                         if (width < 1000)
+              hide_side_menu();        
+   }); 
+} 
+
 
 function resize_listener(){
     function decide_menu_visible() {

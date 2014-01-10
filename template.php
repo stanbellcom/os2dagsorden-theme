@@ -28,7 +28,7 @@
 function os2dagsorden_theme_preprocess_page(&$variables) 
 {    
     drupal_add_js(drupal_get_path('theme', 'os2dagsorden_theme') . '/js/os2dagsorden_theme.js');
-    drupal_add_js('add_show_hide_menu_behaviour();', 'inline');
+    drupal_add_js('add_show_hide_menu_behaviour(' . variable_get('os2dagsorden_collapse_menu', true) . ');', 'inline');
     drupal_add_js('add_tablet_orientation_listener();', 'inline');
     drupal_add_js('add_indicator_help_text();', 'inline');
     drupal_add_js('hide_print_buttons();', 'inline');
