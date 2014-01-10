@@ -135,38 +135,44 @@ function show_side_menu(){
  * 
  * @url is base url, used to send the parameted to attachment_add_expand_behaviour()
  */
-function bullet_point_add_expand_behaviour(url, massive_bilag_expand){
+function bullet_point_add_expand_behaviour(url, massive_bilag_expand, bullet_points_expand){
   var pathname = window.location.pathname;
    jQuery(document).ready(function() {   
-	jQuery(".bullet-point-attachments .view-content .item-list .ul-item-list-dagsordenspunkt").each(function(index) {
-	  jQuery(this).attr("id","attachments_container_"+index);
-	  jQuery(this).hide();
-	  
-	  jQuery(this).parent().parent().parent().children(".hide_show_button_container").append("<input type='button' class='button' id='btn_hide_show_attachments_"+index+"' value='⇓'></a>");
-	  jQuery("#btn_hide_show_attachments_"+index).click(function(){	    
- 	    jQuery("#attachments_container_"+index).toggle();
-	    
-	    if (jQuery("#btn_hide_show_attachments_"+index).val() == "⇓"){//closed
-		jQuery("#btn_hide_show_attachments_"+index).val("⇑");
-		//saving in local storage
-		window.localStorage.setItem(pathname + "-attachments_container_"+index, "true");
-	    }
-	    else {//opened
-		jQuery("#btn_hide_show_attachments_"+index).val("⇓");
-		//saving in local storage
-		window.localStorage.setItem(pathname + "-attachments_container_"+index, "false");
-	    }
- 	  });
-	  
-	  attachment_add_expand_all_behaviour(this, index, url, massive_bilag_expand);  
-	  attachment_add_expand_behaviour(this,index,url, massive_bilag_expand);
-	  
-	  //reading from local storage
-	  if (JSON.parse(window.localStorage.getItem(pathname + "-attachments_container_"+index)) === true){
-	    jQuery("#btn_hide_show_attachments_"+index).click();
-	  }
-	});
-   });
+        jQuery(".bullet-point-attachments .view-content .item-list .ul-item-list-dagsordenspunkt").each(function(index) {
+          jQuery(this).attr("id","attachments_container_"+index);
+          jQuery(this).hide();
+          
+          jQuery(this).parent().parent().parent().children(".hide_show_button_container").append("<input type='button' class='button' id='btn_hide_show_attachments_"+index+"' value='⇓'></a>");
+          
+         jQuery("#btn_hide_show_attachments_"+index).click(function(){            
+             jQuery("#attachments_container_"+index).toggle();
+            
+            if (jQuery("#btn_hide_show_attachments_"+index).val() == "⇓"){//closed
+                jQuery("#btn_hide_show_attachments_"+index).val("⇑");
+                //saving in local storage
+                window.localStorage.setItem(pathname + "-attachments_container_"+index, "true");
+            }
+            else {//opened
+                jQuery("#btn_hide_show_attachments_"+index).val("⇓");
+                //saving in local storage
+                window.localStorage.setItem(pathname + "-attachments_container_"+index, "false");
+            }
+           });
+          
+          attachment_add_expand_all_behaviour(this, index, url, massive_bilag_expand);  
+          attachment_add_expand_behaviour(this,index,url, massive_bilag_expand);
+                         
+                if (bullet_points_expand && (window.localStorage.getItem(pathname + "-attachments_container_"+index)===null||window.localStorage.getItem(pathname + "-attachments_container_"+index)===true)){        
+                  bullet_points_expand_all(this, index, url, massive_bilag_expand);
+          }
+          else{                 
+                                 //reading from local storage
+          if (JSON.parse(window.localStorage.getItem(pathname + "-attachments_container_"+index)) === true){
+            jQuery("#btn_hide_show_attachments_"+index).click();
+                        }
+                }
+        });
+ });
 }
 
 /**
@@ -183,6 +189,17 @@ function bullet_point_details_init(url, massive_bilag_expand){
   });
 }
 
+function bullet_points_expand_all(bulletPoint, bulletPointIndex, url, massive_bilag_expand){
+  var pathname = window.location.pathname;
+        jQuery("#attachments_container_"+bulletPointIndex).show();
+  jQuery("#btn_hide_show_attachments_"+bulletPointIndex).val("⇑");
+        jQuery("[id^=attachment_text_container_"+bulletPointIndex+"_]").each(function(index_attachment){
+          attachment_load_content(bulletPointIndex, index_attachment, url);
+                jQuery("#btn_hide_show_attachment_text_"+bulletPointIndex+"_"+index_attachment).val("⇑");
+                jQuery(this).show();            
+            
+        });
+}
 /**
  * Add expand all behavious for bullet point - opens all of its children.
  * 
