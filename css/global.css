@@ -196,7 +196,6 @@ table.views-table tr td .attachment_text_full_container a:link, table.views-tabl
     width: 100%;
 }
 
-
 /*---------------------------- Small Fixes End ----------------------------*/
 
 
@@ -1292,6 +1291,13 @@ table .hide_show_all_attachments_text{
     float:left;
     left: -75px;
     margin-right: -45px;
+}
+
+.bullet-point-print-link {
+    background: url('../img/icon_print_bullet_point.png') no-repeat 50% top;;
+    height: 16px;
+    width: 16px;
+    float: right;
 }
 
 /*meeting details table end*/
