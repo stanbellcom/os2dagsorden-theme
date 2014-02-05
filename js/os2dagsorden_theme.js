@@ -162,7 +162,7 @@ function bullet_point_add_expand_behaviour(url, massive_bilag_expand, bullet_poi
           attachment_add_expand_all_behaviour(this, index, url, massive_bilag_expand);  
           attachment_add_expand_behaviour(this,index,url, massive_bilag_expand);
                          
-                if (bullet_points_expand && (window.localStorage.getItem(pathname + "-attachments_container_"+index)===null||window.localStorage.getItem(pathname + "-attachments_container_"+index)===true)){        
+         if (bullet_points_expand && (window.localStorage.getItem(pathname + "-attachments_container_"+index)===null||window.localStorage.getItem(pathname + "-attachments_container_"+index)===true)){        
                   bullet_points_expand_all(this, index, url, massive_bilag_expand);
           }
           else{                 
@@ -192,13 +192,14 @@ function bullet_point_details_init(url, massive_bilag_expand){
 function bullet_points_expand_all(bulletPoint, bulletPointIndex, url, massive_bilag_expand){
   var pathname = window.location.pathname;
         jQuery("#attachments_container_"+bulletPointIndex).show();
-  jQuery("#btn_hide_show_attachments_"+bulletPointIndex).val("⇑");
+        jQuery("#btn_hide_show_attachments_"+bulletPointIndex).val("⇑");
         jQuery("[id^=attachment_text_container_"+bulletPointIndex+"_]").each(function(index_attachment){
           attachment_load_content(bulletPointIndex, index_attachment, url);
                 jQuery("#btn_hide_show_attachment_text_"+bulletPointIndex+"_"+index_attachment).val("⇑");
                 jQuery(this).show();            
             
         });
+   jQuery("#btn_hide_show_all_attachments_text_"+bulletPointIndex).val('⇈');    
 }
 /**
  * Add expand all behavious for bullet point - opens all of its children.
