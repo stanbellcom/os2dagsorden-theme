@@ -96,7 +96,7 @@ body{
 /*---------------------------- Small Fixes Start ----------------------------*/
 
 /*Fixing the size of the textfields of Search on the front page*/
-#edit-from-date-value-datepicker-popup-0, #edit-to-date-value-datepicker-popup-0, #edit-field-committee-tid, #edit-search-params{
+#edit-from-date-value-datepicker-popup-0, #edit-to-date-value-datepicker-popup-0, #edit-field-os2web-meetings-committee-tid, #edit-search-params{
     width: 100%;
 }
 
