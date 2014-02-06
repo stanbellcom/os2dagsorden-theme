@@ -25,7 +25,7 @@ body{
   border-top-right-radius: 3px;
  
 }
-#edit-field-committee-tid {
+#edit-field-os2web-meetings-committee-tid {
   border : 1px solid #b9b9b9;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -97,7 +97,7 @@ body{
      width:35%;
    }
  
-  #block-views-exp-meetings-search-page #edit-field-committee-tid-wrapper {
+  #block-views-exp-meetings-search-page #edit-field-os2web-meetings-committee-tid-wrapper {
     width:35%;
    }
  
@@ -161,7 +161,7 @@ body{
      width:15%;
    }
  
-   #block-views-exp-meetings-search-page #edit-field-committee-tid-wrapper{
+   #block-views-exp-meetings-search-page #edit-field-os2web-meetings-committee-tid-wrapper{
     width:18%;
    }
  
