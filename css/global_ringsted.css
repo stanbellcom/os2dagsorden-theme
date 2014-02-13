@@ -219,14 +219,11 @@ body{
     top : -70px !important;
  
   }
-  .page-meeting-bullet-point-bullet-point-attachment .node .help-button{
+  .region-sidebar-second-inner .help-button,
+  .page-meeting-bullet-point-bullet-point-attachment .node .help-button,
+  .view-id-seneste_8_m_der_i_de_st_ende_politiske_udvalg_ .view-header .help-button,
+  .page-meetings-search .view-meetings-search .view-header .help-button {
       top: 7px; 
-  }
- .page-meetings-search .view-meetings-search .view-header .help-button {
-    top : 70px;
-  }
-  .page-meetings-search.toolbar .view-meetings-search .view-header .help-button{
-    top : 10px;
   }
 }  
 /*-----------------------------  End of Search exp- meetings -----------------*/  
