@@ -219,7 +219,9 @@ body{
     top : -70px !important;
  
   }
- //.page-meeting-bullet-point-bullet-point-attachment .node .help-button,
+  .page-meeting-bullet-point-bullet-point-attachment .node .help-button{
+      top: 7px; 
+  }
  .page-meetings-search .view-meetings-search .view-header .help-button {
     top : 70px;
   }
