@@ -135,7 +135,7 @@ function show_side_menu(){
  * 
  * @url is base url, used to send the parameted to attachment_add_expand_behaviour()
  */
-function bullet_point_add_expand_behaviour(url, massive_bilag_expand, bullet_points_expand){
+function bullet_point_add_expand_behaviour(url, massive_bilag_expand, bullet_points_expand, attachments_expand){
   var pathname = window.location.pathname;
    jQuery(document).ready(function() {   
         jQuery(".bullet-point-attachments .view-content .item-list .ul-item-list-dagsordenspunkt").each(function(index) {
@@ -146,9 +146,10 @@ function bullet_point_add_expand_behaviour(url, massive_bilag_expand, bullet_poi
           
          jQuery("#btn_hide_show_attachments_"+index).click(function(){            
              jQuery("#attachments_container_"+index).toggle();
-            
-            if (jQuery("#btn_hide_show_attachments_"+index).val() == "⇓"){//closed
+             if (jQuery("#btn_hide_show_attachments_"+index).val() == "⇓"){//closed
                 jQuery("#btn_hide_show_attachments_"+index).val("⇑");
+                if (attachments_expand)
+                    bullet_points_expand_all(this, index, url, massive_bilag_expand);
                 //saving in local storage
                 window.localStorage.setItem(pathname + "-attachments_container_"+index, "true");
             }
@@ -165,8 +166,7 @@ function bullet_point_add_expand_behaviour(url, massive_bilag_expand, bullet_poi
          if (bullet_points_expand && (window.localStorage.getItem(pathname + "-attachments_container_"+index)===null||window.localStorage.getItem(pathname + "-attachments_container_"+index)===true)){        
                   bullet_points_expand_all(this, index, url, massive_bilag_expand);
           }
-          else{                 
-                                 //reading from local storage
+          else{     //reading from local storage
           if (JSON.parse(window.localStorage.getItem(pathname + "-attachments_container_"+index)) === true){
             jQuery("#btn_hide_show_attachments_"+index).click();
                         }
@@ -185,6 +185,8 @@ function bullet_point_details_init(url, massive_bilag_expand){
     jQuery(".item-list-dagsordenspunkt .ul-item-list-dagsordenspunkt").each(function(index) {
 	attachment_add_expand_all_behaviour(this, index, url, massive_bilag_expand);  
 	attachment_add_expand_behaviour(this, index, url, massive_bilag_expand);
+        if (massive_bilag_expand)
+            bullet_points_expand_all(this, index, url, massive_bilag_expand);
     });
   });
 }
@@ -402,4 +404,18 @@ function hide_budget_menu(){
   jQuery(document).ready(function() {
       jQuery("#menu-budget").parent().hide();
   });  
+}
+
+function hide_massive_expand_collapse_button(){
+  jQuery(document).ready(function() {   
+    jQuery(".ul-item-list-dagsordenspunkt").each(function(index) {     
+          jQuery("#btn_hide_show_all_attachments_text_"+index).hide();              
+    });
+  });
+}
+
+function hide_search_block_title(){
+ jQuery(document).ready(function() {   
+   jQuery("#block-views-exp-meetings-search-page .block-title").hide();
+  });
 }

@@ -33,14 +33,15 @@ function os2dagsorden_theme_preprocess_page(&$variables)
     drupal_add_js('add_indicator_help_text();', 'inline');
     drupal_add_js('hide_print_buttons();', 'inline');
     drupal_add_js('resize_listener();', 'inline');
-    
+    if (variable_get('os2dagsorden_show_search_block_title', 'true')==='false')
+        drupal_add_js('hide_search_block_title()', 'inline');
     $view = views_get_page_view();
     if (!empty($view)) {
 	global $base_path;	
         if ($view->name == 'meeting_details') {
             //adding expand/collapse behaviour to meeting details view
             $os2dagsorden_expand_all_bullets= variable_get('os2dagsorden_expand_all_bullets', false)?true:'false';
-            drupal_add_js('bullet_point_add_expand_behaviour("'. $base_path .'?q=", ' . variable_get('os2dagsorden_expand_attachment', true) . ',  ' . $os2dagsorden_expand_all_bullets . ')', 'inline');
+            drupal_add_js('bullet_point_add_expand_behaviour("'. $base_path .'?q=", ' . variable_get('os2dagsorden_expand_attachment', true) . ',  ' . $os2dagsorden_expand_all_bullets . ' , ' . variable_get('os2dagsorden_expand_attachment_onload', 'false') . ')', 'inline');
             $variables['views'] = '';
             
             //adding pagescroll
@@ -78,6 +79,8 @@ function os2dagsorden_theme_preprocess_page(&$variables)
             //adding expand/collapse behaviour bullet point details view
             drupal_add_js('bullet_point_details_init("'. $base_path .'?q=", ' . variable_get('os2dagsorden_expand_attachment', true) . ')', 'inline');
         }
+       if (variable_get('os2dagsorden_show_massive_expand_collapse_button', 'true')==='false' && ($view->name == 'speaking_paper' || $view->name == 'meeting_details'))
+         drupal_add_js('hide_massive_expand_collapse_button();', 'inline');  
     } else if ($variables['page']['content']['content']['content']['system_main']['content']['#attributes']['class'][1] == 'node-os2web_meetings_spaper-form'){ 
       //in "creating speaker paper"
       //hide extra fields
