@@ -29,7 +29,9 @@ function os2dagsorden_theme_ringsted_preprocess_page(&$variables) {
 	drupal_add_js(drupal_get_path('theme', 'os2dagsorden_theme_ringsted') . '/js/os2dagsorden_theme_ringsted.js');
 	drupal_add_js('stick_side_menu();', 'inline');
 	drupal_add_css(drupal_get_path('theme', 'os2dagsorden_theme_ringsted') . '/css/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lt IE 9', '!IE' => FALSE), 'preprocess' => FALSE));
-
+        if (variable_get('os2dagsorden_show_search_block_title', 'true')==='false')
+            drupal_add_js('hide_search_block_title_ringsted()', 'inline');
+        
 	$view = views_get_page_view();
 	if (!empty($view)) {
 	global $base_path;	

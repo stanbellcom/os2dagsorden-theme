@@ -85,3 +85,10 @@ function open_all_bilag_case_bullet_points() {
     });  
   });
 }
+
+function hide_search_block_title_ringsted(){
+ jQuery(document).ready(function() {   
+     jQuery("#block-views-exp-meetings-search-page .help-button").hide();
+     jQuery("#block-views-exp-meetings-search-page .views-exposed-form").css("padding-left","0px");
+   });
+}
