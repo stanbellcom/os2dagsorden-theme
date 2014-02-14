@@ -180,13 +180,13 @@ function bullet_point_add_expand_behaviour(url, massive_bilag_expand, bullet_poi
  * 
  * @url is base url, used to send the parameted to attachment_add_expand_behaviour()
  */
-function bullet_point_details_init(url, massive_bilag_expand){
+function bullet_point_details_init(url, massive_bilag_expand, attachments_expand){
   jQuery(document).ready(function() {   
     jQuery(".item-list-dagsordenspunkt .ul-item-list-dagsordenspunkt").each(function(index) {
 	attachment_add_expand_all_behaviour(this, index, url, massive_bilag_expand);  
 	attachment_add_expand_behaviour(this, index, url, massive_bilag_expand);
         bilag_cases_add_expand_behaviour(this, index, url, massive_bilag_expand);
-       if (massive_bilag_expand)
+        if (attachments_expand)
             bullet_points_expand_all(this, index, url, massive_bilag_expand);
     });
   });

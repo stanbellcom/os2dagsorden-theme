@@ -80,7 +80,7 @@ function os2dagsorden_theme_preprocess_page(&$variables)
         }
         if ($view->name == 'speaking_paper') {
             //adding expand/collapse behaviour bullet point details view
-            drupal_add_js('bullet_point_details_init("'. $base_path .'?q=", ' . variable_get('os2dagsorden_expand_attachment_onload', true) . ')', 'inline');
+            drupal_add_js('bullet_point_details_init("'. $base_path .'?q=", ' . variable_get('os2dagsorden_expand_attachment', true) . ', ' . variable_get('os2dagsorden_expand_attachment_onload', 'false') . ')', 'inline');
         }
        if (variable_get('os2dagsorden_show_massive_expand_collapse_button', 'true')==='false' && ($view->name == 'speaking_paper' || $view->name == 'meeting_details'))
          drupal_add_js('hide_massive_expand_collapse_button();', 'inline');  
