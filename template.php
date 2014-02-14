@@ -50,6 +50,9 @@ function os2dagsorden_theme_preprocess_page(&$variables)
 		    drupal_add_js('addPagescroller();', 'inline');
         }
         if ($view->name == 'meeting_details' || $view->name == 'speaking_paper') {
+          //adding expand/collapse behaviour bullet point details view
+            if (variable_get('os2dagsorden_expand_bilag_sag_bullet', true))
+		drupal_add_js('open_all_bilag_case_bullet_points();', 'inline');
 	    //adding has notes indicator to attachment
             $annotations = os2dagsorden_annotator_get_notes_by_meeting_id(arg(1));
 	    
@@ -77,7 +80,7 @@ function os2dagsorden_theme_preprocess_page(&$variables)
         }
         if ($view->name == 'speaking_paper') {
             //adding expand/collapse behaviour bullet point details view
-            drupal_add_js('bullet_point_details_init("'. $base_path .'?q=", ' . variable_get('os2dagsorden_expand_attachment', true) . ')', 'inline');
+            drupal_add_js('bullet_point_details_init("'. $base_path .'?q=", ' . variable_get('os2dagsorden_expand_attachment_onload', true) . ')', 'inline');
         }
        if (variable_get('os2dagsorden_show_massive_expand_collapse_button', 'true')==='false' && ($view->name == 'speaking_paper' || $view->name == 'meeting_details'))
          drupal_add_js('hide_massive_expand_collapse_button();', 'inline');  
