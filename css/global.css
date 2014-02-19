@@ -93,6 +93,10 @@ body{
     border-top: 1px solid #e5e5e5;
     padding-top: 15px;
 }
+
+.highlight {
+    background-color:yellow;
+}
 /*---------------------------- Small Fixes Start ----------------------------*/
 
 /*Fixing the size of the textfields of Search on the front page*/
