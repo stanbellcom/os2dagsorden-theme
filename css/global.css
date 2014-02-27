@@ -1163,13 +1163,13 @@ table.views-table tr td a:hover {
     white-space: nowrap;
 }
 
-table.views-table tr td li.bilag a,
-table.views-table tr td li.bilag a:hover {
+table.views-table tr td .bilag a,
+table.views-table tr td .bilag a:hover {
     line-height: 20px;
     font-weight: normal;
     padding-left: 35px;
 }
-table.views-table tr td li.bilag .hide_show_attachment_text{
+table.views-table tr td .bilag .hide_show_attachment_text{
     padding: 3px 10px;
 }
 
