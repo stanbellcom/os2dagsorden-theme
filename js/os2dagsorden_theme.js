@@ -149,7 +149,7 @@ function bullet_point_add_expand_behaviour(url, massive_bilag_expand, bullet_poi
              if (jQuery("#btn_hide_show_attachments_"+index).val() == "⇓"){//closed
                 jQuery("#btn_hide_show_attachments_"+index).val("⇑");
                 if (attachments_expand)
-                    bullet_points_expand_all(this, index, url, massive_bilag_expand);
+                    bullet_points_expand_all(this, index, url, massive_bilag_expand, attachments_expand);
                 //saving in local storage
                 window.localStorage.setItem(pathname + "-attachments_container_"+index, "true");
             }
@@ -161,10 +161,10 @@ function bullet_point_add_expand_behaviour(url, massive_bilag_expand, bullet_poi
            });
           
           attachment_add_expand_all_behaviour(this, index, url, massive_bilag_expand);  
-          attachment_add_expand_behaviour(this,index,url, massive_bilag_expand);
+          attachment_add_expand_behaviour(this,index,url, massive_bilag_expand, attachments_expand);
                          
          if (bullet_points_expand && (window.localStorage.getItem(pathname + "-attachments_container_"+index)===null||window.localStorage.getItem(pathname + "-attachments_container_"+index)===true)){        
-                  bullet_points_expand_all(this, index, url, massive_bilag_expand);
+                  bullet_points_expand_all(this, index, url, massive_bilag_expand, attachments_expand);
           }
           else{     //reading from local storage
           if (JSON.parse(window.localStorage.getItem(pathname + "-attachments_container_"+index)) === true){
@@ -186,22 +186,24 @@ function bullet_point_details_init(url, massive_bilag_expand, attachments_expand
 	attachment_add_expand_all_behaviour(this, index, url, massive_bilag_expand);  
 	attachment_add_expand_behaviour(this, index, url, massive_bilag_expand);
         bilag_cases_add_expand_behaviour(this, index, url, massive_bilag_expand);
-        if (attachments_expand)
-            bullet_points_expand_all(this, index, url, massive_bilag_expand);
+       //if (attachments_expand)
+            bullet_points_expand_all(this, index, url, massive_bilag_expand, attachments_expand);
     });
   });
 }
 
-function bullet_points_expand_all(bulletPoint, bulletPointIndex, url, massive_bilag_expand){
+function bullet_points_expand_all(bulletPoint, bulletPointIndex, url, massive_bilag_expand, attachments_expand){
   var pathname = window.location.pathname;
         jQuery("#attachments_container_"+bulletPointIndex).show();
         jQuery("#btn_hide_show_attachments_"+bulletPointIndex).val("⇑");
-        jQuery("[id^=attachment_text_container_"+bulletPointIndex+"_]").each(function(index_attachment){
-          attachment_load_content(bulletPointIndex, index_attachment, url);
+        if (attachments_expand){
+          jQuery("[id^=attachment_text_container_"+bulletPointIndex+"_]").each(function(index_attachment){
+            attachment_load_content(bulletPointIndex, index_attachment, url);
                 jQuery("#btn_hide_show_attachment_text_"+bulletPointIndex+"_"+index_attachment).val("⇑");
-                jQuery(this).show();            
+                jQuery(this).show();
             
-        });
+          });
+      }   
    jQuery("#btn_hide_show_all_attachments_text_"+bulletPointIndex).val('⇈');    
 }
 /**
@@ -250,7 +252,7 @@ function attachment_add_expand_all_behaviour(bulletPoint, bulletPointIndex, url,
  * 
  * Also calls attachment_load_content
  */
-function attachment_add_expand_behaviour(bulletPoint, bulletPointIndex, url, massive_bilag_expand){
+function attachment_add_expand_behaviour(bulletPoint, bulletPointIndex, url, massive_bilag_expand,  attachments_expand){
   var pathname = window.location.pathname;
   
   jQuery(bulletPoint).children("li").children(".attachment_text_container").each(function(index_attachment){
@@ -277,7 +279,7 @@ function attachment_add_expand_behaviour(bulletPoint, bulletPointIndex, url, mas
       }
       
       //handle expand all
-      if (massive_bilag_expand){
+      if (attachments_expand){
 	if (jQuery("[id^=btn_hide_show_attachment_text_"+bulletPointIndex+"_][value='⇓']").length > 0)
 	  jQuery("#btn_hide_show_all_attachments_text_"+bulletPointIndex).val("⇊");
 	else
@@ -300,12 +302,12 @@ function attachment_add_expand_behaviour(bulletPoint, bulletPointIndex, url, mas
       jQuery("#btn_hide_show_attachment_text_"+bulletPointIndex+"_"+index_attachment).click();
     }
   });
-  jQuery(".bullet-point-attachments .view-content .item-list .ul-item-list-dagsordenspunkt").each(function(index) {
-      jQuery(this).children("li.bilags_cases").children(".bilags_cases_container").attr("id","bilags_cases_container_"+index);
+  jQuery("#attachments_container_"+bulletPointIndex).each(function(index) {
+      jQuery(this).children("li.bilags_cases").children(".bilags_cases_container").attr("id","bilags_cases_container_"+bulletPointIndex);
       jQuery(this).children("li.bilags_cases").children(".bilags_cases_container").hide();
-      bilag_cases_add_expand_behaviour(this,index, url, massive_bilag_expand);
+      bilag_cases_add_expand_behaviour(this,bulletPointIndex, url, massive_bilag_expand);
     });
-}
+  }
 
 /**
  * Loads the content of the attachment and places it into the container
@@ -345,10 +347,10 @@ function attachment_load_content(bulletPointIndex, index_attachment, url){
 }
 function bilag_cases_add_expand_behaviour(bulletPoint, bulletPointIndex, url, massive_bilag_expand){
   var pathname = window.location.pathname;
+  
   jQuery(bulletPoint).children("li").children(".bilags_cases_container").each(function(index_attachment){
     jQuery(this).attr("id","bilags_cases_container_"+bulletPointIndex+"_"+index_attachment);
     jQuery(this).hide();
-
     jQuery(this).parent().prepend("<input type='button' class='button hide_show_bilags_cases' id='btn_hide_bilags_cases_"+bulletPointIndex+"_"+index_attachment+"' value='⇓'>");
     jQuery("#btn_hide_bilags_cases_"+bulletPointIndex+"_"+index_attachment).click(function(){
       //hide or show the content container

@@ -1289,7 +1289,12 @@ table .hide_show_attachment_text{
     left: -45px;
     margin-right: -45px;
 }
-
+table .hide_show_bilags_cases{
+    position: relative;
+    float:left;
+    left: -45px;
+    margin-right: -45px;
+}
 table .hide_show_all_attachments_text{
     position: relative;
     float:left;

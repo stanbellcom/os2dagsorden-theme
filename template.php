@@ -51,7 +51,7 @@ function os2dagsorden_theme_preprocess_page(&$variables)
         }
         if ($view->name == 'meeting_details' || $view->name == 'speaking_paper') {
           //adding expand/collapse behaviour bullet point details view
-            if (variable_get('os2dagsorden_expand_bilag_sag_bullet', true))
+           if (variable_get('os2dagsorden_expand_attachment', "true")=="true")
 		drupal_add_js('open_all_bilag_case_bullet_points();', 'inline');
 	    //adding has notes indicator to attachment
             $annotations = os2dagsorden_annotator_get_notes_by_meeting_id(arg(1));
