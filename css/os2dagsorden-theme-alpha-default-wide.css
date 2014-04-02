@@ -4,7 +4,7 @@
 }
 
 .attachment_text_container .attachment-text{
-  overflow: hidden;
+  overflow-y: hidden;
   max-width: 600px;
 }
 
