@@ -186,7 +186,7 @@ function bullet_point_details_init(url, massive_bilag_expand, attachments_expand
 	attachment_add_expand_all_behaviour(this, index, url, massive_bilag_expand);  
 	attachment_add_expand_behaviour(this, index, url, massive_bilag_expand);
         bilag_cases_add_expand_behaviour(this, index, url, massive_bilag_expand);
-       //if (attachments_expand)
+       if (attachments_expand)
             bullet_points_expand_all(this, index, url, massive_bilag_expand, attachments_expand);
     });
   });
@@ -204,7 +204,7 @@ function bullet_points_expand_all(bulletPoint, bulletPointIndex, url, massive_bi
             
           });
       }   
-   jQuery("#btn_hide_show_all_attachments_text_"+bulletPointIndex).val('⇈');    
+    jQuery("#btn_hide_show_all_attachments_text_"+bulletPointIndex).val('⇈');    
 }
 /**
  * Add expand all behavious for bullet point - opens all of its children.
