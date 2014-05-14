@@ -459,12 +459,24 @@ function hide_search_block_title(){
   });
 }
 
-function open_all_bilag_case_bullet_points() {
+function open_all_bilag_case_bullet_points(expand_bilags, expand_cases) {
   jQuery(document).ready(function() {
-    jQuery(".hide_show_bilags_cases").each(function(index) {
+   if (expand_bilags)  { 
+    jQuery("li.bilags").children(".hide_show_bilags_cases").each(function(index) {
+       if (jQuery(this).val() == '⇓') {
+          
+	jQuery(this).click();
+      }
+    }); 
+  }
+  if(expand_cases)  { 
+    jQuery("li.cases").children(".hide_show_bilags_cases").each(function(index) {
       if (jQuery(this).val() == '⇓') {
 	jQuery(this).click();
       }
-    });  
+    }); 
+  }
+
   });
+  
 }

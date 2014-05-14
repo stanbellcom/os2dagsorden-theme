@@ -42,7 +42,8 @@ function os2dagsorden_theme_preprocess_page(&$variables)
             //adding expand/collapse behaviour to meeting details view
             $os2dagsorden_expand_all_bullets= variable_get('os2dagsorden_expand_all_bullets', false)?true:'false';
             drupal_add_js('bullet_point_add_expand_behaviour("'. $base_path .'?q=", ' . variable_get('os2dagsorden_expand_attachment', true) . ',  ' . $os2dagsorden_expand_all_bullets . ' , ' . variable_get('os2dagsorden_expand_attachment_onload', 'false') . ')', 'inline');
-            $variables['views'] = '';
+            drupal_add_js('open_all_bilag_case_bullet_points(' . variable_get('os2dagsorden_expand_bilags', "true") . ','. variable_get('os2dagsorden_expand_cases', "false") .')', 'inline');
+            $variables['views'] = '';  
             
             //adding pagescroll
 		    drupal_add_css(drupal_get_path('theme', 'os2dagsorden_theme') . '/css/pagescroller.skins.css');	    
@@ -50,9 +51,7 @@ function os2dagsorden_theme_preprocess_page(&$variables)
 		    drupal_add_js('addPagescroller();', 'inline');
         }
         if ($view->name == 'meeting_details' || $view->name == 'speaking_paper') {
-          //adding expand/collapse behaviour bullet point details view
-           if (variable_get('os2dagsorden_expand_attachment', "true")=="true")
-		drupal_add_js('open_all_bilag_case_bullet_points();', 'inline');
+                                
 	    //adding has notes indicator to attachment
             $annotations = os2dagsorden_annotator_get_notes_by_meeting_id(arg(1));
 	    
@@ -81,6 +80,8 @@ function os2dagsorden_theme_preprocess_page(&$variables)
         if ($view->name == 'speaking_paper') {
             //adding expand/collapse behaviour bullet point details view
             drupal_add_js('bullet_point_details_init("'. $base_path .'?q=", ' . variable_get('os2dagsorden_expand_attachment', true) . ', ' . variable_get('os2dagsorden_expand_attachment_onload', 'false') . ')', 'inline');
+            drupal_add_js('open_all_bilag_case_bullet_points(' . variable_get('os2dagsorden_expand_bilags', "true") . ','. variable_get('os2dagsorden_expand_cases', "false") .')', 'inline');
+              
         }
        if (variable_get('os2dagsorden_show_massive_expand_collapse_button', 'true')==='false' && ($view->name == 'speaking_paper' || $view->name == 'meeting_details'))
          drupal_add_js('hide_massive_expand_collapse_button();', 'inline');  
