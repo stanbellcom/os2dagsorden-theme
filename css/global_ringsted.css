@@ -344,6 +344,9 @@ a.form-submit, a.button {
   max-width: 100% !important;
   width: 100% !important;
 }
+.attachment-text img{
+  padding-right: 22px;
+}
 table.views-table tr td a,
 table.views-table tr td a:hover {
 	font-family: inherit;
