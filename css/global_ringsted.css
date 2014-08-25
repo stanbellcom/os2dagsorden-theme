@@ -341,8 +341,8 @@ a.form-submit, a.button {
 
 /* ---------------------------- Table Styles START---------------------------- */
 .attachment-text table {
-  max-width: 100% !important;
-  width: 100% !important;
+  /*max-width: 100% !important;
+  width: 100% !important;*/
 }
 .attachment-text img{
   padding-right: 22px;
